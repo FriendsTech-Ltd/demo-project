@@ -1,0 +1,19 @@
+{
+  "name": "demo-project",
+  "version": "1.0.0",
+  "description": "Project management practicing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriendsTech-Ltd/demo-project.git"
+  },
+  "author": "FriendsTech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FriendsTech-Ltd/demo-project/issues"
+  },
+  "homepage": "https://github.com/FriendsTech-Ltd/demo-project#readme"
+}
