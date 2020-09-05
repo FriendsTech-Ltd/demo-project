@@ -26,7 +26,7 @@ export const addUser = asyncHandler(async (req, res) => {
   return res.status(201).json({
     success: true,
     msg: 'User Created Success',
-    newUser,
+    data: newUser,
   });
 });
 
@@ -43,6 +43,18 @@ export const editUser = asyncHandler(async (req, res) => {
   return res.status(200).json({
     success: true,
     msg: 'User Update success',
-    updateUser,
+    data: updateUser,
   });
+});
+
+// Delete User
+export const deleteUser = asyncHandler(async (req, res) => {
+  const result = await UserModel.findByIdAndDelete(req.params.id);
+  res.status(200).json({ success: true, data: result, msg: 'User deleted successfully' });
+});
+
+// Get all users
+export const getUsers = asyncHandler(async (req, res) => {
+  const users = await UserModel.find();
+  res.status(200).json({ success: true, data: users, msg: 'All user' });
 });
