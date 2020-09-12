@@ -1,8 +1,15 @@
 
 import React,{useContext,useEffect} from 'react';
-
+import UserContext from '../context/users/userContext'
 
 const GetData = () => {
+
+  const {getUsers,users,error} = useContext(UserContext)
+console.log(users)
+  useEffect(()=>{
+getUsers()
+// eslint-disable-next-line
+  },[])
 
   return (
 

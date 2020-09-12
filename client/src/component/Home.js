@@ -12,7 +12,7 @@ const Home = () => {
   
   return (
 
-<div class="container">
+<div class="p-5">
 <div class="row">
   <div class="col-sm">
   <AddData/>
