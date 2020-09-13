@@ -28,18 +28,15 @@ const onSubmit=e=>{
 
 const onChange=e=>{setFormData({...formData,[e.target.name]:e.target.value});}
     return <Fragment>
-      
 
-<div className="row">
-
-        <div className="col-md-6 offset-md-3">
+        <div className='p-3'>
     
 
-          <h2 className="text-center display-6">Add Data</h2>
+          <h5 className="text-center">Add Data</h5>
           <form onSubmit={e=>onSubmit(e)}>
            
             <div className="form-group">
-              <label htmlFor="websiteName"> userName: </label>
+              <label htmlFor="websiteName"> User name: </label>
               <input
                 required
                 type="text"
@@ -87,7 +84,6 @@ const onChange=e=>{setFormData({...formData,[e.target.name]:e.target.value});}
 
           </form>
         </div>
-      </div>
 
     </Fragment>
 }
