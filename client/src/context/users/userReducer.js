@@ -7,12 +7,15 @@ import {
 export default (state, action) => {
   switch(action.type){
     case ADD_USER:
-      case GET_USERS:
+      return {
+        ...state,
+        users: [...state.users, action.payload]
+      }
+    case GET_USERS:
       return {
         ...state,
         users: action.payload
       }
- 
     case USER_ERROR:
       return {
         ...state,

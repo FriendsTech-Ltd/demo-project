@@ -1,7 +1,11 @@
 
-import React, { useState, useEffect,Fragment } from "react";
+import React, { useState, useEffect,Fragment, useContext } from "react";
+
+import UserContext from '../context/users/userContext'
 
 const AddData = () => {
+  const userContext = useContext(UserContext);
+  const { addUser } = userContext;
 
 
 
@@ -19,7 +23,7 @@ const {userName,email,address}=formData
 
 const onSubmit=e=>{
     e.preventDefault();
-
+    addUser(formData);
     }
 
 const onChange=e=>{setFormData({...formData,[e.target.name]:e.target.value});}
@@ -37,6 +41,7 @@ const onChange=e=>{setFormData({...formData,[e.target.name]:e.target.value});}
             <div className="form-group">
               <label htmlFor="websiteName"> userName: </label>
               <input
+                required
                 type="text"
                 className="form-control"
                 placeholder="Enter Your userName"
@@ -50,6 +55,7 @@ const onChange=e=>{setFormData({...formData,[e.target.name]:e.target.value});}
             <div className="form-group">
               <label htmlFor="websiteUrl"> Email: </label>
               <input
+                required
                 type="text"
                 className="form-control"
                 placeholder="Enter Your Email"
@@ -63,6 +69,7 @@ const onChange=e=>{setFormData({...formData,[e.target.name]:e.target.value});}
             <div className="form-group">
               <label htmlFor="address">Address </label>
               <input
+                required
                 type="websitePass"
                 className="form-control"
                 placeholder="Enter Your Address"
