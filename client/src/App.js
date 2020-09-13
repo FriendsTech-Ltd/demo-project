@@ -5,16 +5,19 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container card">
+    <div className="container">
       <div>
-        <h3 className="card text-center p-4">Demo project </h3>
+        <h3 className="card text-center p-4 text-success">Demo project by FriendsTech</h3>
       </div>
+     <div className='card'>
       <UserState>
        <Home/>
        </UserState>
 
-       <div>
-        <h3 className="card text-center p-4">develop by naser & shoedul</h3>
+      
+     </div>
+     <div className='card mt-1'>
+        <p className="text-center p-3">Developed by Abdullah Naser & Shohedul</p>
       </div>
     </div>
   );

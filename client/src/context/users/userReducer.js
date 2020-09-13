@@ -3,11 +3,18 @@ import {
   GET_USERS,
   USER_ERROR,
   DELETE_USER,
-  EDITABLE_USER
+  EDITABLE_USER, EDIT_USER
 } from '../type';
 
 export default (state, action) => {
   switch(action.type){
+    case EDIT_USER:
+      return {
+        ...state,
+        users: state.users.map(user =>
+          user._id === action.payload._id ? action.payload : user
+        )
+      }
     case EDITABLE_USER:
       return {
         ...state,

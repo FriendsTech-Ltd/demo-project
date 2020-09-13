@@ -12,12 +12,12 @@ const Home = () => {
   
   return (
 
-<div class="p-5">
+<div class="">
 <div class="row">
-  <div class="col-sm">
+  <div class="col-4">
   <AddData/>
   </div>
-  <div class="col-sm">
+  <div class="col-8">
   <GetData/>
   </div>
 
